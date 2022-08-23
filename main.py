@@ -30,6 +30,8 @@ def get_post():
         pipeline_parse.parse_pipeline_data(pipeline_data=request.json, license_key=license_key, account_id=account_id)
     elif 'deployment' == request.json['object_kind']:
         deployment_parse.parse_deployment_data(deployment_data=request.json, license_key=license_key, account_id=account_id)
+    else:
+        print(request.json)
 
 
 
