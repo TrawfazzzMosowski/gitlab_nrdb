@@ -22,7 +22,7 @@ def parse_push_data(push_data, license_key, account_id):
 
         elif 'commits' == item:
 
-
+            nr_commit_event = {}
             for c_item in push_data['commits']:
                 nr_commit_event = {}
                 nr_commit_event['eventType'] = 'gitlabPushCommitEvent'
