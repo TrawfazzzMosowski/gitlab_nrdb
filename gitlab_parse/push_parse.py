@@ -43,7 +43,7 @@ def parse_push_data(push_data, license_key, account_id):
 
 
     #print(nr_event)
-    nrbd_write.write_data(nr_event, license_key,account_id=account_id)
+    nrbd_write.write_data(nr_event, license_key, account_id=account_id)
     #print(nr_commit_array)
-    nrbd_write.write_data(nr_commit_array, license_key,account_id=account_id)
+    nrbd_write.write_data(nr_commit_array, license_key, account_id=account_id)
     return {"result": "success"}
