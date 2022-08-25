@@ -7,7 +7,7 @@ def parse_tag_push_data(tag_push_data, license_key, account_id):
     # print(tag_push_data)
 
     nr_event = {}
-    nr_event['eventType'] = 'gitlabtag_pushEvent'
+    nr_event['eventType'] = 'gitlabtag_push_tag_Event'
     global_project_id = tag_push_data['project']['id']
     nr_event['git_project_id'] = global_project_id
     nr_tag_push_array = []
