@@ -1,7 +1,7 @@
 
 import json
 import os
-from gitlab_parse import push_parse, build_parse, pipeline_parse, deployment_parse, tag_push_parse
+from gitlab_parse import push_parse, build_parse, pipeline_parse, deployment_parse, tag_push_parse, release_parse
 import gitlab_parse
 from flask import Flask, json, request
 
@@ -32,6 +32,8 @@ def get_post():
         deployment_parse.parse_deployment_data(deployment_data=request.json, license_key=license_key, account_id=account_id)
     elif 'tag_push' == request.json['object_kind']:
         tag_push_parse.parse_tag_push_data(tag_push_data=request.json, license_key=license_key, account_id=account_id)
+    elif 'release' == request.json['object_kind']:
+        release_parse.parse_release_data(release_data=request.json, license_key=license_key, account_id=account_id)
     else:
         print(request.json)
 
